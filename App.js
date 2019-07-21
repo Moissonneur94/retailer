@@ -6,8 +6,9 @@ import {
   createStackNavigator
 } from "react-navigation";
 import { Ionicons } from "react-native-vector-icons";
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { Buffer } from "buffer";
-import { CheckBox, Button } from "react-native-elements";
+import { CheckBox, Button, Input } from "react-native-elements";
 
 //Авторизация
 
@@ -94,7 +95,12 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Приветствую.</Text>
+        <Text>Приветствую1.</Text>
+
+        <Input
+          placeholder="INPUT WITH ICON"
+          leftIcon={{ type: "font-awesome", name: "chevron-left" }}
+        />
       </View>
     );
   }
