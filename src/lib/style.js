@@ -7,7 +7,7 @@ export const styleSignIn = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  buttonText:{
+  buttonText: {
     textAlign: 'center'
   }
 });
