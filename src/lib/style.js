@@ -12,11 +12,11 @@ export const styleSignIn = StyleSheet.create({
   },
   container: {
     flex: 1
-  }, 
+  },
   error: {
     borderWidth: 3,
     borderColor: "red"
-  }, 
+  },
   input: {
     height: 40,
     backgroundColor: "rgba(166, 194, 220, 0.5)",
