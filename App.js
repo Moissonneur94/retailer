@@ -14,6 +14,7 @@ import { Buffer } from "buffer";
 import { CheckBox, Button } from "react-native-elements";
 
 
+//Авторизация
 
 class SignInScreen extends Component {
   constructor() {
@@ -80,6 +81,7 @@ class SignInScreen extends Component {
   }  
 }
 
+// Главная страница
 class HomeScreen extends Component {
   render() {
     return(
@@ -91,6 +93,9 @@ class HomeScreen extends Component {
     );
   }
 }
+
+
+// Регистрация
 
 class RegistrationScreen extends Component {
   constructor() {
@@ -110,6 +115,7 @@ class RegistrationScreen extends Component {
     }
   };
 
+  // проверка на правильность ввода 
   validate(text, type) {
     alph=/^[a-zA-Z@._-]+$/
     beth=/^[a-zA-Z0-9]+$/
@@ -189,7 +195,7 @@ class RegistrationScreen extends Component {
             placeholderTextColor="rgba(0, 0, 0, 0.6)"
             returnKeyType="next"
             onSubmitEditing={() => this.nameInput.focus()}
-            // onChangeText={(text) => this.validate(text, 'lastName')}
+            onChangeText={(text) => this.validate(text, 'lastName')}
             onChangeText = {(userLastName) => this.setState({userLastName})}
             autoCapitalize="none"
             autoCorrect={false}
@@ -200,7 +206,7 @@ class RegistrationScreen extends Component {
               placeholderTextColor="rgba(0, 0, 0, 0.6)"
               returnKeyType="next"
               onSubmitEditing={() => this.phoneInput.focus()}
-              // onChangeText={(text) => this.validate(text, 'name')}
+              onChangeText={(text) => this.validate(text, 'name')}
               onChangeText = {(userName) => this.setState({userName})}
               autoCapitalize="none"
               autoCorrect={false}
@@ -225,7 +231,7 @@ class RegistrationScreen extends Component {
               placeholderTextColor="rgba(0, 0, 0, 0.6)"
               returnKeyType="next"
               onSubmitEditing={() => this.passwordInput.focus()}
-              // onChangeText={(text) => this.validate(text, 'username')}
+              onChangeText={(text) => this.validate(text, 'username')}
               onChangeText = {(userEmail) => this.setState({userEmail})}
               keyboardType="email-address"
               autoCapitalize="none"
@@ -236,7 +242,7 @@ class RegistrationScreen extends Component {
           <TextInput 
             placeholder="Password"
             placeholderTextColor="rgba(0, 0, 0, 0.6)"
-            // onChangeText={(text) => this.validate(text, 'password')}
+            onChangeText={(text) => this.validate(text, 'password')}
             onChangeText = {(userPassword) => this.setState({userPassword})}
             returnKeyType="go"
             secureTextEntry
